@@ -1,0 +1,23 @@
+arr = zeros(1,1000);
+head = zeros(1,1000);
+x=0;
+y=0;
+for i=1:1000;
+    arr(i)=i;
+    x=0;
+   
+    for j=1:i
+        z= round(rand(1,1)*100);
+        if z<50
+          x=x+1;
+        end
+    end 
+       head(i)=x/i;
+end
+plot (arr,head)
+title ('performance analysis of tossing')
+xlabel ('no. of trials');
+ylabel ('no. of heads');
+legend ('heads probability')
+%grid on;
+disp('analysis of tossing coin')
