@@ -1,0 +1,17 @@
+arr=zeros(1,100);
+a=zeros(1,100);
+b=zeros(1,100);
+for i=1:100
+    arr=round(rand(1,i)*100);
+    brr=arr;
+    a(i)=variant_quick(arr,1,i);
+    b(i)=quicksort(brr,1,i);
+    curve(i)=i;
+ end
+ plot(curve,a,curve,b);
+ title('Performance analysis of Quick sort')
+xlabel('No. of elements');
+ylabel('No. of comparisons');
+legend('Variant of Quick Sort','Quick Sort')
+
+
